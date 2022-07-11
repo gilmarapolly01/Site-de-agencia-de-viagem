@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <title>Login do cliente</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<style>
+    /* CSS reset */
+    
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        margin: 10px;
+        background-image: url("avião.jpg");
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    /* esconde as ancoras da tela */
+    
+    a.links {
+        display: none;
+    }
+    /* content que contem os formulários */
+    
+    .content {
+        width: 500px;
+        margin: 0px auto;
+        position: relative;
+    }
+    /* formatando o cabeçalho dos formulários */
+    
+    h1 {
+        font-size: 48px;
+        color: #066a75;
+        padding: 10px 0;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    
+    h1:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 10px;
+        background: -webkit-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+        background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+    }
+    
+    p {
+        margin-bottom: 15px;
+    }
+    
+    p:first-child {
+        margin: 0px;
+    }
+    /**** advanced input styling ****/
+    /* placeholder */
+    
+     ::-webkit-input-placeholder {
+        color: #bebcbc;
+        font-style: italic;
+    }
+    
+    input:-moz-placeholder,
+    textarea:-moz-placeholder {
+        color: #bebcbc;
+        font-style: italic;
+    }
+    
+    input {
+        outline: none;
+    }
+    
+    input:not([type="checkbox"]) {
+        width: 95%;
+        margin-top: 4px;
+        padding: 10px;
+        border: 1px solid #b2b2b2;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+        box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+    /*estilo do botão submit */
+    
+    input[type="submit"] {
+        width: 100%!important;
+        cursor: pointer;
+        background: #3d9db3;
+        padding: 8px 5px;
+        color: #fff;
+        font-size: 20px;
+        border: 1px solid #fff;
+        margin-bottom: 10px;
+        text-shadow: 0 1px 1px #333;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        transition: all 0.2s linear;
+    }
+    /*marcando os links para mudar de um formulário para outro */
+    
+    .link {
+        position: absolute;
+        background: #e1eaeb;
+        color: #7f7c7c;
+        left: 0px;
+        height: 20px;
+        width: 440px;
+        padding: 17px 30px 20px 30px;
+        font-size: 16px;
+        text-align: right;
+        border-top: 1px solid #dbe5e8;
+        -webkit-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .link a {
+        font-weight: bold;
+        background: #f7f8f1;
+        padding: 6px;
+        color: rgb(29, 162, 193);
+        margin-left: 10px;
+        border: 1px solid #cbd518;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-transition: all 0.4s linear;
+        transition: all 0.4s linear;
+    }
+    
+    .link a:hover {
+        color: #39bfd7;
+        background: #f7f7f7;
+        border: 1px solid #4ab3c6;
+    }
+    /* estilos para para ambos os formulários */
+    
+    #login {
+        position: absolute;
+        top: 0px;
+        width: 70%;
+        padding: 20px 6% 60px 6%;
+        margin: 0 0 35px 0;
+        background: rgb(247, 247, 247);
+        border: 1px solid rgba(147, 184, 189, 0.8);
+        border-radius: 5px;
+        -webkit-animation-duration: 0.5s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-fill-mode: both;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: both;
+    }
+    
+    h4:after {
+        content: ' ';
+        display: block;
+        width: 100%;
+        height: 1px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg " style="background-color: #fafafa ">
+        <div class="container-fluid">
+            <img src="TO TRAVEL-PhotoRoom (1).png" width="200px" height="200px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Promoção.html">Promoção</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="destino.html">Destino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+
+    </nav>
+
+
+    <div id="cadastro">
+        <form method="post" action="">
+            <h1>Login </h1>
+
+
+            <p>
+                <label for="CPF">CPF / Email</label><br>
+                <input id="CPF_cad" name="CPF_cad" required="required" type="text" placeholder="CPF" />
+            </p>
+
+            <p>
+                <label for="senha_cad"> senha</label><br>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234" />
+            </p>
+
+            <p>
+                <input type="submit" value="Login" />
+            </p>
+
+            <p class="link">
+                Ainda não tem cadastro?
+                <a href="cadastro.html"> Cadastrar </a>
+            </p>
+        </form>
+</body>
+
+</html>
